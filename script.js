@@ -17,14 +17,14 @@ function w3_open() {
 
 
 
-// const data = fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=2fa0563fa1a4419da31dd04077630319');
+const data = fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=2fa0563fa1a4419da31dd04077630319');
 data.then((res) => {
     console.log(res);
     res.json().then((response) => {
         console.log(response.articles);
         let article = response.articles;
         article.map((e)=>{
-            breaking.innerHTML += `<a>Today's Breaking:-${e.title}, </a>`
+            breaking.innerHTML += `<a>${e.title}, </a>`
             let newsHtml = "";
             let news = `
                 <div class="accordion-item">
@@ -38,7 +38,7 @@ data.then((res) => {
                         <div class="accordion-body">
                             <p>${e.description}</p>
                         </div>
-                        <a href="" target="_blank">Read More here...</a>
+                        <a href="${e.url}" target="_blank">Read More here...</a>
                     </div>
                 </div>
           `;
