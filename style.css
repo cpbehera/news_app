@@ -30,6 +30,32 @@ a {
 
 .mainContent {
     display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+.newscontainer {
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid green;
+}
+.header{
+    border: 2px solid red;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.header .menu{
+    border: 2px solid red;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .menu span{
+    margin: .7rem;
+    font-size: 20px;
 }
 
 .navbar {
@@ -46,12 +72,7 @@ a {
     justify-content: space-between;
 }
 
-.newscontainer {
-    width: 80%;
-    margin-top: 6rem;
-    padding: 2rem;
 
-}
 
 .breakingNews{
     background-color: rgb(180, 11, 11);

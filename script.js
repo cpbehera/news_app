@@ -17,23 +17,24 @@ function w3_open() {
 
 
 
-const data = fetch('http://api.mediastack.com/v1/news?access_key=c0784f8cc1668a76b2196276a83fc0b6');
+// const data = fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=2fa0563fa1a4419da31dd04077630319');
 data.then((res) => {
     console.log(res);
     res.json().then((response) => {
-        console.log(response);
-        let article = response.data;
+        console.log(response.articles);
+        let article = response.articles;
         article.map((e)=>{
             breaking.innerHTML += `<a>Today's Breaking:-${e.title}, </a>`
             let newsHtml = "";
             let news = `
                 <div class="accordion-item">
                     <div class="imgDiv">
-                        <img src="${e.image}" alt="" />
+                        <img src="${e.urlToImage}" alt="" />
                     </div>
                     <div class="newsBody">
                         <h3 class="accordion-header" id="headingOne">${e.title}</h3>
-                        <h6 class="author">Published_at ${e.published_at}</h6>
+                        <h6 class="author">Published_at ${e.publishedAt
+                        }</h6>
                         <div class="accordion-body">
                             <p>${e.description}</p>
                         </div>
