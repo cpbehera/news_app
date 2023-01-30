@@ -13,46 +13,37 @@
 
 
 
+  <div class="header">
+    <div class="logo">
+      <img src="./logo.png" alt="">
+    </div>
+  </div>
+
+
   <div class="mainContent">
-    <div class="header">
-      <div class="menu">
-        <span><i class="fa-solid fa-bars"></i></span>
-        <span>Menu</span>
-      </div>
-      <div class="logo">
-        <img src="./logo.png" alt="">
-      </div>
+    <div class="breakingImg">
+      <img src="./breaking.png" alt="">
+      <hr />
+    </div>
+    <div class="breakingNews">
+      <marquee behavior="" direction="" id="breaking"></marquee>
     </div>
 
-
-    <div class="newscontainer">
-      <div class="breakingImg">
-        <img src="./breaking.png" alt="">
+    <div class="newsCategory">
+      <div class="sidebar" id="">
+        <!-- Sidebar -->
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="#" id="listItem" onclick="fetchHeadlineNews()">Headlines</a></li>
+            <li><a href="#" id="listItem" onclick="fetchGeneralNews()">General</a></li>
+            <li><a href="#" id="listItem" onclick="fetchBusinessNews()">Business</a></li>
+            <li><a href="#" id="listItem" onclick="fetchSportsNews()">Sports</a></li>
+            <li><a href="#" id="listItem" onclick="fetchEntertainmentNews()">Entertainment</a></li>
+            <li><a href="#" id="listItem" onclick="fetchTechnologyNews()">Technology</a></li>
+          </ul>
+        </nav>
       </div>
-      <hr />
-      <div class="breakingNews">
-        <marquee behavior="" direction="" id="breaking"></marquee>
-      </div>
-
-      <div class="newsCategory">
-        <div class="sidebar" id="">
-          <!-- Sidebar -->
-
-          <nav class="navbar">
-            <ul>
-              <li><a href="#" class="w3-bar-item w3-button">Link 1</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 2</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 3</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 3</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 3</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 3</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 3</a></li>
-              <li><a href="#" class="w3-bar-item w3-button">Link 3</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="accordion" id="newsHeading"></div>
-      </div>
+      <div class="accordion" id="newsHeading"></div>
     </div>
   </div>
 
